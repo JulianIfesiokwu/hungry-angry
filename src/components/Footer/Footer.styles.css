@@ -1,0 +1,157 @@
+.footer {
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    color: #fff;
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+.address p {
+    margin-bottom: 1rem;
+    width: 100%;
+    text-decoration: none;
+}
+
+.email, .website {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.explore-title {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.explore a {
+    margin-bottom: 1rem;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+.newsletter-title {
+    padding: 1rem;
+    background-color: red;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 1rem;
+}
+
+.newsletter input {
+    margin: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 90%;
+    border-radius: 0.5rem;
+    border: 1px solid red;
+}
+
+.newsletter-btn {
+    width: 90%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #4CAF50;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-social-media {
+    margin-bottom: 1rem;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    .details {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        gap: 5%;
+    }
+
+    .address {
+        width: 30%;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .address p {
+        text-align: start;
+    }
+
+    .email, .website {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .explore {
+        width: 30%;
+        align-items: flex-start;
+    }
+
+    .explore a {
+        text-align: start;
+        width: auto;
+        padding: 0 1rem 0 0;
+    }
+
+    .newsletter {
+        width: 30%;
+    }
+}

@@ -1,0 +1,73 @@
+.card {
+    flex: 1;
+    border-radius: 0.5rem;
+    width: 100%;
+    margin: 1rem 0;
+    position: relative;
+    transition: all 1.5s cubic-bezier(0.7, 0.5, 0.3, 1.8);
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    position: relative;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    cursor: pointer;
+}
+
+.front {
+    backface-visibility: hidden;
+    height: 100%;
+}
+
+.back {
+    transform: rotateY(180deg);
+    position: absolute;
+    height: 100%;
+    background-color: red;
+    color: #fff;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-image-container {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.card-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color:  #4CAF50;
+    border-radius: 0 0 0.5rem 0.5rem ;
+}
+
+.card-title {
+    margin-bottom: 0.5rem;
+    color: red;
+    text-transform: uppercase;
+}
+
+.summary {
+    margin-bottom: 0.5rem;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .card {
+        width: 30%;
+    }
+}
