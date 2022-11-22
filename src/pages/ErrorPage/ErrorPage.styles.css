@@ -1,0 +1,44 @@
+.error-page {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.error-code {
+    font-size: 5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: red;
+}
+
+.error-message {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    width: 90%;
+}
+
+.section-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-btn, .prev-btn {
+    display: inline;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.home-btn a, .prev-btn a {
+    text-decoration: none;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .section-two {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+}
