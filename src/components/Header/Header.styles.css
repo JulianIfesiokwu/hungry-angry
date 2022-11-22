@@ -1,0 +1,154 @@
+.header {
+    max-width: 100%;
+    position: relative;
+}
+
+.row-one {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.logo-container {
+    width: 30px;
+    height: 30px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+.media-icon {
+    margin-left: 0.75rem;
+}
+
+.instagram {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 25px;
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+
+.row-two {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #111;
+    padding: 0 0.5rem;
+}
+
+/* fixed to top for mobile screens */
+.fixed-to-top {
+    position: fixed;
+    top: 0;
+    z-index: 20;
+}
+
+.search-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.nav-links {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    color: #fff;
+}
+
+/* show nav-links on mobile */
+.show {
+    display: flex;
+}
+
+/* change the active navbar links */ 
+.active {
+    font-weight: 600;
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.nav-links a {
+    text-decoration: none;
+    width: 100%;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+.search-container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+.search-input {
+    width: 85%;
+    height: 100%;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+}
+
+.search-btn {
+    width: 15%;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    .row-one {
+        padding: 0.5rem 2rem;
+    }
+
+    .row-two {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+        margin: 0;
+    }
+
+    .search-section {
+        width: auto;
+        padding: 0;
+    }
+
+    .nav-links {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        width: auto;
+        padding: 0.5rem 2rem 0.5rem 0;
+        margin-right: 0.5rem;
+    }
+
+    .search-container {
+        width: auto;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+}
