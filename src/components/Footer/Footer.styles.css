@@ -2,8 +2,16 @@
     background-color: #111;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 1rem;
+    color: #fff;
+}
+
+.footer-name p {
+        color: #fff;
+    }
+
+.copyright {
+    margin-bottom: 2rem;
     color: #fff;
 }
 
@@ -12,16 +20,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .address {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin: 1rem 0;
 }
 
 .logo {
@@ -29,40 +33,41 @@
     height: 30px;
 }
 
-.address p {
-    margin-bottom: 1rem;
-    width: 100%;
-    text-decoration: none;
+.address h3 {
+    margin: 2rem 0;
+    font-weight: 300;
+    font-size: 1.5rem;
 }
 
-.email, .website {
+.address p {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    text-decoration: none;
+    color: #868c98;
+}
+
+.email, .website, .location-info, .phone-no {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .explore {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 1rem 0;
 }
 
 .explore-title {
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
     font-size: 1.5rem;
-    font-weight: 500;
-    color: #fff;
-    border-bottom: 2px solid #fff;
 }
 
 .explore a {
     margin-bottom: 1rem;
     width: 100%;
     text-decoration: none;
-    text-align: center;
-    color: #fff;
+    color: #868c98;
+    font-size: 1.2rem;
 }
 
 .newsletter {
@@ -80,8 +85,9 @@
     background-color: red;
     width: 100%;
     text-align: center;
-    font-weight: 500;
+    font-weight: 300;
     border-radius: 8px 8px 0 0;
+    letter-spacing: 1px;
     margin-bottom: 1rem;
 }
 
@@ -91,38 +97,56 @@
     padding: 0.5rem;
     width: 90%;
     border-radius: 0.5rem;
-    border: 1px solid red;
+    border: 1px solid #ddd;
 }
 
 .newsletter-btn {
     width: 90%;
     margin-bottom: 1rem;
     padding: 0.5rem;
-    border-radius: 0.5rem;
-    border: none;
+    border: 1px solid #fff;
     background-color: #4CAF50;
-    font-weight: 700;
+    font-weight: 300;
+    letter-spacing: 1px;
     color: #fff;
     cursor: pointer;
 }
 
+.newsletter-btn:hover {
+    background-color: #fff;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+}
+
 .footer-social-media {
+    display: flex;
     margin-bottom: 1rem;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    .copyright {
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
 
     .details {
         width: 100%;
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
         padding: 1rem;
         gap: 5%;
     }
 
-    .address {
+    .footer-name {
         width: 30%;
+    }
+
+    .address {
+        width: 40%;
         align-items: flex-start;
     }
 
@@ -130,8 +154,13 @@
         margin-bottom: 1rem;
     }
 
+    .address h3 {
+        margin: 0 0 1rem 0;
+    }
+
     .address p {
         text-align: start;
+        margin-bottom: 1rem;
     }
 
     .email, .website {
@@ -145,6 +174,10 @@
         align-items: flex-start;
     }
 
+    .explore-title {
+        margin-bottom: 1rem;
+    }
+
     .explore a {
         text-align: start;
         width: auto;
@@ -152,6 +185,6 @@
     }
 
     .newsletter {
-        width: 30%;
+        width: 40%;
     }
 }

@@ -1,0 +1,60 @@
+.about-us {
+    padding: 1rem;
+}
+
+.about-title {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #4CAF50;
+    color: #4CAF50;
+    font-weight: 300;
+}
+
+.mission-title, .vision-title, .we-are-title {
+    padding-bottom: 0.5rem;
+    color: #4CAF50;
+    font-weight: 300;
+}
+
+.line {
+    width: 10%;
+    height: 2px;
+    background-color: #4CAF50;
+}
+
+.mission-statement, .vision-statement, .we-are-statement {
+    margin: 1rem 0;
+}
+
+.about-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .about-us {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .about-all {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5%;
+    }
+
+    .about-details {
+        width: 60%;
+        border-radius: 8px;
+    }
+
+}

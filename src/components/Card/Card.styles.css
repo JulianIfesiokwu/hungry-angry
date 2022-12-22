@@ -3,36 +3,11 @@
     border-radius: 0.5rem;
     width: 100%;
     margin: 1rem 0;
-    position: relative;
-    transition: all 1.5s cubic-bezier(0.7, 0.5, 0.3, 1.8);
-    transform-style: preserve-3d;
+    border: 1px solid #ddd;
 }
 
-.front, .back {
-    position: relative;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
+.card:hover {
     cursor: pointer;
-}
-
-.front {
-    backface-visibility: hidden;
-    height: 100%;
-}
-
-.back {
-    transform: rotateY(180deg);
-    position: absolute;
-    height: 100%;
-    background-color: red;
-    color: #fff;
-    border-radius: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    text-align: center;
 }
 
 .card-image-container {
@@ -51,18 +26,34 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    background-color:  #4CAF50;
     border-radius: 0 0 0.5rem 0.5rem ;
 }
 
 .card-title {
     margin-bottom: 0.5rem;
-    color: red;
-    text-transform: uppercase;
+    color: #4CAF50;
 }
 
 .summary {
     margin-bottom: 0.5rem;
+}
+
+.card-btn {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #fff;
+    margin-top: 1rem;    
+    color: white;
+    background-color: #4CAF50;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.card-btn:hover {
+    background-color: #fff;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

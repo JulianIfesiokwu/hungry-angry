@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Card.styles.css';
 
-const Card = ({img,title,summary}) => {
+const Card = ({img,title,summary,btnTitle,link}) => {
   return (
     <div className='card'>
       <div className="front">
@@ -11,12 +12,9 @@ const Card = ({img,title,summary}) => {
         <div className="card-details">
             <h3 className='card-title'>{title}</h3>
             <p className="summary">{summary}</p>
-            <button className='learn-more-btn' type='button'><span className='red'>Click here</span> to learn more...</button>
+            <Link className='card-btn' type='button' to={link}>{btnTitle}</Link>
         </div>
       </div>
-        <div className="back">
-          <p>Use your time to serve the world and you will find that the world serves you.</p>
-        </div>
     </div>
   )
 };
