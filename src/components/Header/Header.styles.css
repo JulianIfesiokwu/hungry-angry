@@ -107,8 +107,9 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        background-color: transparent;
-        padding: 0.5rem 2rem;
+        background-color: #111;
+        opacity: 0.9;
+        padding: 0.5rem 2rem 0 2rem;
         margin: 0;
     }
 

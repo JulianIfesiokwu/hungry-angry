@@ -32,11 +32,11 @@ const HeaderAndNavigation = () => {
             </div>
             <div className={menu ? "nav-links" : "nav-links show"}>
                 <NavLink to="/">Home</NavLink>
-                <NavLink to="/about">About Us</NavLink>
-                <NavLink to="/contact-us">Contact Us</NavLink>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/contact-us">Contact</NavLink>
                 <NavLink to="/gallery">Gallery</NavLink>
-                <NavLink to="/volunteer">Volunteers</NavLink>
-                <NavLink to="/trainers">Trainers</NavLink>
+                <NavLink to="/volunteer">Volunteer</NavLink>
+                <NavLink to="/train">Trainers</NavLink>
                 <NavLink to="/donations">Donations</NavLink>
             </div>
         </div>
