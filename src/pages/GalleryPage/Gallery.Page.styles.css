@@ -1,0 +1,15 @@
+.image-gallery {
+    padding: 1rem;
+    margin-top: 4rem;
+}
+
+.control-btn {
+    cursor: pointer;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .image-gallery {
+        padding: 2rem;
+    }
+}
