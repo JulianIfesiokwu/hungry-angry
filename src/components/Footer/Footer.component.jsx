@@ -4,6 +4,9 @@ import Logo from "../../assets/logo.png"
 import "./Footer.styles.css";
 
 const Footer = () => {
+  const d = new Date();
+  let year = d.getFullYear();
+
   return (
     <div className='footer'>
       <section className="details">
@@ -23,11 +26,11 @@ const Footer = () => {
         <div className="explore">
           <h3 className='explore-title'>Explore</h3>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About Us</NavLink>
-          <NavLink to="/contact-us">Contact Us</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/contact-us">Contact</NavLink>
           <NavLink to="/gallery">Gallery</NavLink>
           <NavLink to="/volunteer">Volunteers</NavLink>
-          <NavLink to="/trainers">Trainers</NavLink>
+          <NavLink to="/train">Trainers</NavLink>
           <NavLink to="/donations">Donations</NavLink>
         </div>
         <form action="" className="newsletter">
@@ -39,7 +42,7 @@ const Footer = () => {
           <button type="submit" className='newsletter-btn'>Submit</button>
         </form>
     </section>
-    <p className='copyright'>Copyright &copy;2022 www.hungryangry.com</p>
+    <p className='copyright'>Copyright &copy;{year} www.hungryangry.com</p>
   </div>
   );
 };

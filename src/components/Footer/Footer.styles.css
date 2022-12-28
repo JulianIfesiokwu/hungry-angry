@@ -91,6 +91,11 @@
     margin-bottom: 1rem;
 }
 
+
+.newsletter-title p {
+    color: #fff;
+}
+
 .newsletter input {
     margin: 0.5rem;
     margin-bottom: 1rem;
