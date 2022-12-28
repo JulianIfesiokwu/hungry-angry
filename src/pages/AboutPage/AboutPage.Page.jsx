@@ -7,17 +7,17 @@ import './AboutPage.styles.css';
 const AboutPage = () => {
     return (
         <div className='about-page'>
-            <div className="carousel">
-          <div className="carousel-image-container display-image">
-            <img src={carouselImage3} alt="" className='carousel-image' />
+            <div className="landing">
+          <div className="landing-image-container">
+            <img src={carouselImage3} alt="" className='landing-image' />
           </div>
-          <div className="heading-text">
-            <h1 className='heading-major'>Converge & innovate, push boundaries and open doors.</h1>
+          <div className="landing-text">
+            <h1 className='landing-major'>Converge & innovate, push boundaries and open doors.</h1>
             <Link to="/donations" className='donations-cta'>Donate to a Cause</Link>
           </div>
       </div>
             <section className='about-us'>
-                <h1 className='about-title'>About US</h1>
+                <h1 className='about-title'>About Us</h1>
                 <div className="about-all">
                     <div className="about-details">
                         <article className="vision">
