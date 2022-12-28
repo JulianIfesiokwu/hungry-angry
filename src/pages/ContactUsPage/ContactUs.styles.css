@@ -1,0 +1,78 @@
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+}
+
+.contact-title {
+    margin: 2rem 0;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+}
+
+.first-row input {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+}
+
+.second-row input {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+}
+
+.send-message {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #fff;
+    background-color: #4CAF50;
+    font-weight: 300;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.send-message:hover {
+    background-color: #fff;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.business-info p{
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .contact-details {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0.5rem 2rem;
+        gap: 2%;
+    }
+}
