@@ -36,7 +36,7 @@ const HeaderAndNavigation = () => {
                 <NavLink to="/contact-us">Contact</NavLink>
                 <NavLink to="/gallery">Gallery</NavLink>
                 <NavLink to="/volunteer">Volunteer</NavLink>
-                <NavLink to="/train">Trainers</NavLink>
+                <NavLink to="/train">Train</NavLink>
                 <NavLink to="/donations">Donations</NavLink>
             </div>
         </div>
