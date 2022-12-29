@@ -22,7 +22,7 @@ import Image19 from '../../assets/Gallery Images/Image (19).jpeg';
 import Image20 from '../../assets/Gallery Images/Image (20).jpeg';
 import Image21 from '../../assets/Gallery Images/Image (21).jpeg';
 import Image22 from '../../assets/Gallery Images/Image (22).jpeg';
-import { AiOutlineLeft,AiOutlineRight } from "react-icons/ai";
+import { AiOutlineLeft, AiOutlineRight, AiOutlineClose } from "react-icons/ai";
 
 import './Gallery.Page.styles.css';
 
@@ -33,7 +33,6 @@ export default function Gallery() {
 
   const viewImage = (img, i) => {
     setData({img, i});
-    console.log(img, i)
   };
 
   const imgAction = (action) => {
@@ -53,7 +52,8 @@ export default function Gallery() {
     <>
       {
         data.img && 
-        <div style={{
+        <div
+          style={{
           width: '100%',
           height: '100vh',
           background: 'black',
@@ -69,7 +69,11 @@ export default function Gallery() {
             color='#fff' 
             className='control-btn'
             onClick={() => imgAction('prev-img')}/>
-          <img src={data.img} alt='' style={{
+          <img 
+            src={data.img} 
+            
+            alt=''
+             style={{
             width: 'auto',
             maxWidth: '80%',
             maxHeight: '80%',
@@ -81,6 +85,12 @@ export default function Gallery() {
             className='control-btn'
             onClick={() => imgAction('next-img')}
              />
+          <AiOutlineClose
+          size='40'
+          color='#fff'
+          className='control-btn close-btn'
+          onClick={() => imgAction()}
+          />
         </div>
       }
       <div className='image-gallery'>
