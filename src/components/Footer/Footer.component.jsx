@@ -29,8 +29,8 @@ const Footer = () => {
           <NavLink to="/about">About</NavLink>
           <NavLink to="/contact-us">Contact</NavLink>
           <NavLink to="/gallery">Gallery</NavLink>
-          <NavLink to="/volunteer">Volunteers</NavLink>
-          <NavLink to="/train">Trainers</NavLink>
+          <NavLink to="/volunteer">Volunteer</NavLink>
+          <NavLink to="/train">Train</NavLink>
           <NavLink to="/donations">Donations</NavLink>
         </div>
         <form action="" className="newsletter">
