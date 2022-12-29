@@ -36,10 +36,11 @@
     background-color: #4CAF50;
     letter-spacing: 1px;
     color: #fff;
-    margin-top: 3rem;
     font-size: 1.2rem;
     font-weight: 300;
     cursor: pointer;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .donations-cta:hover, .about-cta:hover {
@@ -48,38 +49,60 @@
     border: 1px solid #4CAF50;
 }
 
-.heading-text {
+.landing-text {
     position: absolute;
-    width: 90%;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+    color: #fff;
+    top: 50%;
+    left: 1rem;
+    right: 1rem;
 }
 
-.heading-major {
-    margin-bottom: 2rem;
+.landing-major {
+    margin-bottom: 3rem;
+    font-weight: 400;
+    text-shadow: 3px 0px 7px rgba(81,67,21,0.8), 
+	  -3px 0px 7px rgba(81,67,21,0.8), 
+	  0px 4px 7px rgba(81,67,21,0.8);
+}
+
+.highlight {
+    color: #4CAF50;
+    font-weight: 500;
 }
 
 .welcome {
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    gap: 3%;
+}
+
+.welcome-image-container {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.welcome-image-container img {
+    border-radius: 5px;
 }
 
 .welcome-title {
     color: #4CAF50;
     margin-bottom: 1rem;
+    font-weight: 300;
 }
 
-.welcome-info {
+.welcome-info-one {
     text-align: justify;
     margin: 1rem 0;
     color: #072366;
 }
-
-.red {
-    color: red;
-    font-weight: 700;
+.welcome-info {
+    text-align: justify;
+    margin: 1rem 0 2rem 0;
+    color: #072366;
 }
 
 .more-info {
@@ -126,9 +149,9 @@
         font-size: 2rem;
     }
 
-    .heading-major {
-        font-size: 2.5rem;
+    .landing-major {
         width: 50%;
+        margin-bottom: 2rem;
     }
 
     .carousel-cta {
@@ -151,10 +174,20 @@
 
     .welcome {
         padding: 2rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .welcome-image-container {
+        width: 50%;
+    }
+
+    .column-two {
+        width: 50%;
     }
 
     .welcome-info {
-        width: 70%;
         margin: 1rem 0;
     }
 

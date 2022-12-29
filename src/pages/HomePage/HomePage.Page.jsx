@@ -18,19 +18,26 @@ const HomePage = () => {
             <img src={carouselImage1} alt="" className='landing-image' />
           </div>
           <div className="landing-text">
-            <h1 className='landing-major'>A wealth creation & generation NGO.</h1>
+            <h1 className='landing-major'>A wealth <span className='highlight'>creation</span> & <span className='highlight'>generation</span> NGO.</h1>
             <Link to="/donations" className='donations-cta'>Donate to a Cause</Link>
           </div>
       </div>
       <section className="welcome">
-        <h3 className="welcome-title">What We Are Doing</h3>
-        <p>We are on a mission to help the helpless.</p>
-        <p className="welcome-info">We are positioning ourselves to become a wealth generating network, where ordinary self driven individuals can converge and innovate, push boundaries and open doors. Hungry and Angry is attempting to bring people with diverse professions to come together under one umbrella for exchange learning.</p>
-        <Link className='about-cta' to='/about'>Learn more...</Link>
+        <div className="column-two">
+          <h2 className="welcome-title">What We Are Doing</h2>
+          <p className='welcome-info-one'>We are on a mission to help the helpless.</p>
+          <p className="welcome-info">We are positioning ourselves to become a wealth generating network, where ordinary self driven individuals can converge and innovate, push boundaries and open doors. Hungry and Angry is attempting to bring people with diverse professions to come together under one umbrella for exchange learning.
+          </p>
+          <Link className='about-cta' to='/about'>Learn more...</Link>
+        </div>
+        <div className="welcome-image-container">
+          <img src={cardImage3} alt='' />
+        </div>
       </section>
       <section className="more-info">
         <Card img={cardImage1} title={`Volunteering`} summary={`It became necessary to seek new ways to complement the efforts of government`} btnTitle={`Volunteer with Us`} link={`/volunteer`}/>
         <Card img={cardImage2} title={`Trainers`} summary={`Hungry and Angry attempts to bring together people with diverse professions under ...`} btnTitle={`Train with Us`} link={`/train`}/>
+        <Card img={cardImage3} title={`Donations`} summary={`Hungry and Angry attempts to bring together people with diverse professions under ...`} btnTitle={`Donate to a Cause`} link={`/donate`}/>
         <Card img={cardImage3} title={`Donations`} summary={`Hungry and Angry attempts to bring together people with diverse professions under ...`} btnTitle={`Donate to a Cause`} link={`/donate`}/>
         </section>
       <section className='conclusion'>
