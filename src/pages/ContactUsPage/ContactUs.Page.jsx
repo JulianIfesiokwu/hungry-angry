@@ -1,23 +1,51 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { AiOutlineMail } from "react-icons/ai";
 import { MdPhoneAndroid, MdArrowForward } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 import './ContactUs.styles.css';
+import { ContactFormContext } from '../../context/ContactFormContext';
 
 export const ContactUs = () => {
+  const { handleInput, handleSubmit } = useContext(ContactFormContext)
+
   return (
     <section className="contact-details">
-        <form className='contact-form'>
+        <form className='contact-form' onSubmit={(e) => handleSubmit(e)}>
           <h3 className="contact-title">Get in Touch</h3>
-          <textarea placeholder='Enter Message' id="" cols="30" rows="5"></textarea>
+          <textarea 
+            placeholder='Enter Message'  
+            id="" 
+            cols="30" 
+            rows="5"
+            name='contact-message'
+            onChange={(e) => handleInput(e)}
+            required
+            />
           <div className="first-row">
-            <input type="text" placeholder='Name' />
-            <input type="email" placeholder='Email'/>
+            <input 
+              type="text" 
+              placeholder='Name' 
+              name='contact-name'
+              onChange={(e) => handleInput(e)}
+              required
+              />
+            <input 
+              type="email" 
+              placeholder='Email'
+              name='contact-email'
+              onChange={(e) => handleInput(e)}
+              required/>
           </div>
           <div className="second-row">
-            <input type="text" placeholder='Subject' />
+            <input 
+              type="text" 
+              placeholder='Subject' 
+              name='contact-subject'
+              onChange={(e) => handleInput(e)}
+              required
+              />
           </div>
-          <button className='send-message'>Send &nbsp;<MdArrowForward size='25' /></button>
+          <button className='send-message' type='submit'>Send &nbsp;<MdArrowForward size='25' /></button>
         </form>
         <div className="business-info">
           <p><FaHome size='30' color='#4CAF50'/><span>21 Aguegbe Street, Amikwo, Awka, Anambra State.</span></p>
