@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { SubscribeContext } from '../../context/SubscribeContext';
 import { NavLink } from 'react-router-dom';
 import Logo from "../../assets/logo.png"
 import "./Footer.styles.css";
@@ -6,6 +7,7 @@ import "./Footer.styles.css";
 const Footer = () => {
   const d = new Date();
   let year = d.getFullYear();
+  const { handleInput, handleSubmit } = useContext(SubscribeContext);
 
   return (
     <div className='footer'>
@@ -31,14 +33,24 @@ const Footer = () => {
           <NavLink to="/gallery">Gallery</NavLink>
           <NavLink to="/volunteer">Volunteer</NavLink>
           <NavLink to="/train">Train</NavLink>
-          <NavLink to="/donations">Donations</NavLink>
+          <NavLink to="/donate">Donations</NavLink>
         </div>
-        <form action="" className="newsletter">
+        <form onSubmit={(e) => handleSubmit(e)} className="newsletter">
           <div className='newsletter-title'>
             <p>Subscribe to our newsletters</p>
           </div>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder='Email' />
+          <input 
+            type="text" 
+            placeholder="Name" 
+            name='subscriber-name' 
+            onChange={(e) => handleInput(e)}
+            required/>
+          <input 
+            type="email" 
+            placeholder='Email' 
+            name='subscriber-email' 
+            onChange={(e) => handleInput(e)}
+            required/>
           <button type="submit" className='newsletter-btn'>Submit</button>
         </form>
     </section>
