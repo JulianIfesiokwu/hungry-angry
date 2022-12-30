@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import carouselImage1 from '../../assets/carousel (1).jpeg';
 
 export default function Train() {
+
   return (
     <div className='volunteer'>
       <div className="landing">
@@ -66,7 +67,7 @@ export default function Train() {
             Community Services
             <span className="checkmark"></span>
           </label> 
-          <p>Mention the experiences -if any- you find relevant for any of the above programs.</p>
+          <h3 className='experiences-title'>Mention the experiences -if any- you find relevant for any of the above programs.</h3>
           <textarea placeholder='Enter Message' id="" cols="30" rows="5" className='experiences'></textarea>
         </div>
         <button className='confirm-application'>Submit Application</button>
