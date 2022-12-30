@@ -145,11 +145,17 @@
     border-radius: 0.5rem;
 }
 
+.experiences-title {
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
 .confirm-application {
     width: 100%;
     margin-bottom: 1rem;
     padding: 0.5rem;
     border: 1px solid #fff;
+    border-radius: 5px;
     background-color: #4CAF50;
     font-weight: 300;
     letter-spacing: 1px;
@@ -189,7 +195,7 @@
     }
 
     .volunteer-form {
-        width: 60%;
+        max-width: 60%;
         margin: 2rem auto;
         padding: 2rem;
         display: flex;
