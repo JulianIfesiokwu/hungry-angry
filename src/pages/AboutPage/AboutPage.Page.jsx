@@ -12,7 +12,7 @@ const AboutPage = () => {
             <img src={carouselImage3} alt="" className='landing-image' />
           </div>
           <div className="landing-text">
-            <h1 className='landing-major'>Converge & innovate, push boundaries and open doors.</h1>
+            <h1 className='landing-major'><span className='highlight'>Converge</span> & <span className='highlight'>innovate,</span> push boundaries and open doors.</h1>
             <Link to="/donations" className='donations-cta'>Donate to a Cause</Link>
           </div>
       </div>
