@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import carouselImage3 from "../../assets/carousel (3).jpeg";
+import aboutImage from "../../assets/aboutpage_landing.jpeg";
 import AboutImage from "../../assets/about-us.jpeg";
 import './AboutPage.styles.css';
 
@@ -9,11 +9,11 @@ const AboutPage = () => {
         <div className='about-page'>
             <div className="landing">
           <div className="landing-image-container">
-            <img src={carouselImage3} alt="" className='landing-image' />
+            <img src={aboutImage} alt="" className='landing-image' />
           </div>
           <div className="landing-text">
-            <h1 className='landing-major'><span className='highlight'>Converge</span> & <span className='highlight'>innovate,</span> push boundaries and open doors.</h1>
-            <Link to="/donations" className='donations-cta'>Donate to a Cause</Link>
+            <h1 className='landing-major'><span className='highlight'>Doing nothing</span> is not an <span className='highlight'>option.</span></h1>
+            <Link to="/donate" className='donations-cta'>Donate to a Cause</Link>
           </div>
       </div>
             <section className='about-us'>
@@ -28,12 +28,12 @@ const AboutPage = () => {
                         <article className="mission">
                             <h3 className="mission-title">Our Mission</h3>
                             <div className="line"></div>
-                            <p className='mission-statement'>We exist, so that we can collaborate with different stakeholders in changing lives to give every individual opportunities to live a dignified life. We bridge the gap bewteeen non resource areas and the surplus resource areas in our world.</p>
+                            <p className='mission-statement'>We exist, so that we can collaborate with different stakeholders in changing lives to give every individual opportunities to live a dignified life.</p>
                         </article>
                         <article className="we-are">
                             <h3 className="we-are-title">Who We Are</h3>
                             <div className="line"></div>
-                            <p className="we-are-statement">We are positioning ourselves to becoming a wealth generation network, where ordinary self driven individuals can converge, innovate, push boundaries and open doors. Hungry & Angry brings people together from diverse professions under one umbrella for exchange learning.</p>
+                            <p className="we-are-statement">Based in Anambra state, Nigeria, Hungry & Angry is a not for profit Non Government Organisation with the aim to empower, educate and invest in local communities to create and facilitate their development.</p>
                         </article>
                     </div>
                     <div className="about-image">
