@@ -53,3 +53,7 @@ p {
 #root, #__next {
   isolation: isolate;
 }
+
+input {
+  margin-top: 0.5rem;
+}
