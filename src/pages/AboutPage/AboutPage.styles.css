@@ -33,7 +33,6 @@
 .about-image img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -52,7 +51,7 @@
     }
 
     .about-details {
-        width: 60%;
+        width: 80%;
         border-radius: 8px;
     }
 
