@@ -15,11 +15,12 @@
 .landing-image-container::after {
     content: "";
     position: absolute;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 2;
 }
 
 .landing-image {
@@ -29,24 +30,27 @@
     object-fit: cover;
 }
 
-.donations-cta, .about-cta {
+.donations-cta {
     text-decoration: none;
-    padding: 0.75rem 1.5rem;
+    padding: 0.7rem 1.4rem;
     border: none;
     background-color: #4CAF50;
     letter-spacing: 1px;
     color: #fff;
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
     cursor: pointer;
-    border-radius: 5px;
+}
+
+.donations-cta:hover {
+    background-color: #fff;
+    color: #4CAF50;
+    border: 1px solid #fff;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
-.donations-cta:hover, .about-cta:hover {
-    background-color: #fff;
+.about-cta {
     color: #4CAF50;
-    border: 1px solid #4CAF50;
 }
 
 .landing-text {
@@ -55,28 +59,31 @@
     top: 50%;
     left: 1rem;
     right: 1rem;
+    z-index: 3;
 }
 
 .landing-major {
-    margin-bottom: 3rem;
-    font-weight: 400;
-    text-shadow: 3px 0px 7px rgba(81,67,21,0.8), 
-	  -3px 0px 7px rgba(81,67,21,0.8), 
-	  0px 4px 7px rgba(81,67,21,0.8);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .highlight {
     color: #4CAF50;
-    font-weight: 500;
 }
 
 .welcome {
     margin-top: 1rem;
     padding: 1rem;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 100%;
     gap: 3%;
+}
+
+.welcome-header, .more-info-header {
+    margin-bottom: 1rem;
+    font-weight: 400;
+    color: #072366;
 }
 
 .welcome-image-container {
@@ -84,8 +91,8 @@
     border-radius: 5px;
 }
 
-.welcome-image-container img {
-    border-radius: 5px;
+.column-two {
+    margin-bottom: 2rem;
 }
 
 .welcome-title {
@@ -106,11 +113,17 @@
 }
 
 .more-info {
+    margin-top: 1rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    perspective: 500px;
+    width: 100%;
+    gap: 3%;
+}
+
+.more-info-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .conclusion {
@@ -133,8 +146,6 @@
 .article-img-container img {
     width: 100%;
     height: auto;
-    display: block;
-    border-radius: 0.5rem;
 }
 
 
@@ -144,14 +155,18 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .heading-text {
-        bottom: 25%;
+    .landing-text {
+        top: 35%;
         font-size: 2rem;
     }
 
+    .landing-text {
+        left: 2rem;
+    }
+
     .landing-major {
-        width: 50%;
-        margin-bottom: 2rem;
+        width: 80%;
+        font-size: 4.625rem;
     }
 
     .carousel-cta {
@@ -174,9 +189,22 @@
 
     .welcome {
         padding: 2rem;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .welcome-header {
+        font-size: 2.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .welcome-content {
+        display: flex;
+        flex-direction: row;
+        gap: 5%;
+        align-items: center;
+        justify-content: center;
     }
 
     .welcome-image-container {
@@ -191,11 +219,21 @@
         margin: 1rem 0;
     }
 
+    .more-info-header {
+        font-size: 2.75rem;
+        margin-bottom: 2rem;
+    }
+
     .more-info {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 2%;
         padding: 2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .more-info-content {
+        flex-direction: row;
+        gap: 3%;
     }
 
     .conclusion {
