@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import carouselImage1 from '../../assets/carousel (1).jpeg';
+import volunteerImage from "../../assets/volunteerpage_landing.jpg";
 import { VolunteerContext } from '../../context/VolunteerContext';
 import './VolunteerPage.styles.css';
 
@@ -11,50 +10,72 @@ export default function Volunteer() {
     <div className='volunteer'>
       <div className="landing">
           <div className="landing-image-container">
-            <img src={carouselImage1} alt="" className='landing-image' />
+            <img src={volunteerImage} alt="" className='landing-image' />
           </div>
           <div className="landing-text">
-            <h1 className='landing-major'>Join our <span className='highlight'>team</span></h1>
-            <p className='landing-minor'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia et possimus aspernatur totam exercitationem reiciendis explicabo dolor.</p>
-            <Link to="/donations" className='landing-cta'>Join Us</Link>
+            <h1 className='landing-major'>Work with <span className='highlight'>Us</span></h1>
+            <a href="#volunteer-form" className='landing-cta'>Get started</a>
           </div>
       </div>
       <div className='why-us'>
         <h3 className='why-us-title'>Why volunteer with us</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem nobis, incidunt suscipit laborum nulla, minus at voluptas debitis voluptates exercitationem ut consequatur officia reiciendis soluta, iusto placeat deserunt eveniet ullam.</p>
+        <p>Thinking of becoming a volunteer? See a list of reasons that will help you make up your mind.</p>
+        <ul className='volunteer-list'>
+          <li>As a volunteer you assist in uniting people from diverse backgrounds to work toward a common goal thereby building camaraderie and teamwork.</li>
+          <li>As a volunteer you help support families, improve schools (tutoring, literacy), support youth (mentoring and after-school programs).</li>
+          <li>Volunteering encourages civic responsibility. Community service and volunteerism are an investment in our community and the people who live in it.</li>
+          <li>Volunteers gain professional experience. You can test out a career.</li>
+          <li>You make a difference. Every person counts!</li>
+        </ul>
+        <p>So what are you waiting for, fill in the form and let's get started.</p>
       </div>
-      <form className='volunteer-form' onSubmit={(e) => handleSubmit(e)}>
+      <form className='volunteer-form' onSubmit={(e) => handleSubmit(e)} id="volunteer-form">
         <h3 className='volunteer-form-title'>Volunteer Recruitment Application Form</h3>
         <p className='about-volunteering'>Our organization is looking for dynamic volunteers to coordinate and recruit fundraising teams, leverage community support, plan activities and help our great cause! Please submit your application through the Volunteer Recruitment Form below. Answering the following questions will help us match your volunteer application with a suitable volunteer role.</p>
         <p className='about-volunteering'>We thank you for your interest in volunteering and supporting our organization's cause.</p>
         <div className='personal-information'>
           <h3 className='personal-information-title'>Volunteer Personal Information</h3>
+          <label htmlFor='vounteer-name'>Volunteer Name:</label>
           <input 
             type='text' 
             placeholder='Volunteers Name' 
+            id='vounteer-name'
             name='volunteer-name'
             onChange={(e) => handleInput(e)}
             required
             />
+          <label htmlFor='volunteer-email'>Volunteer Email:</label>
           <input 
             type='email' 
             placeholder='Email' 
+            id='volunteer-email'
             name='volunteer-email'
             onChange={(e) => handleInput(e)}
-            required/>
+            required />
+          <label htmlFor='volunteer-birth-date'>Volunteer Date of Birth:</label>
           <input 
             type='date' 
             placeholder='Birth Date' 
+            id='volunteer-birth-date'
             name='volunteer-birth-date'
             onChange={(e) => handleInput(e)}
             required />
+          <label htmlFor='volunteer-phone-number'>Volunteer Phone Number:</label>
           <input 
             type='number' 
             placeholder='Phone' 
             name='volunteer-phone-number'
+            id='volunteer-phone-number'
             onChange={(e) => handleInput(e)}
-            />
-          <input type='text' placeholder='Address' />
+          />
+            <label htmlFor='volunteer-address'>Volunteer Address:</label>
+          <input 
+            type='text' 
+            placeholder='Address'
+            id='volunteer-address'
+            name='volunteer-address'
+            onChange={(e) => handleInput(e)}
+          />
         </div>
         <div className='availability'>
           <h3 className='availability-title'>How often could you spare your time to volunteer with us?</h3>
@@ -135,7 +156,7 @@ export default function Volunteer() {
             onChange={(e) => handleInput(e)}
             className='experiences' />
         </div>
-        <button className='confirm-application' type='submit'>Submit Application</button>
+        <button className='confirm-application' type='submit'>Submit Form</button>
       </form>
     </div>
   )
