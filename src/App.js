@@ -15,6 +15,7 @@ import Train from './pages/TrainPage/Train.Page';
 import { SubscribeContext } from './context/SubscribeContext';
 import { ContactFormContext } from './context/ContactFormContext';
 import { VolunteerContext } from './context/VolunteerContext';
+import { traineeContext } from './context/TraineeContext';
 
 function App() {
   const [ data, setData ] = useState({});
@@ -37,7 +38,8 @@ function App() {
     <SubscribeContext.Provider value={{ setData, handleInput, handleSubmit }}>
       <ContactFormContext.Provider value={{ setData, handleInput, handleSubmit }}>
         <VolunteerContext.Provider value={{ setData, handleInput, handleSubmit }}>
-          <Routes>
+          <traineeContext.Provider value={{ setData, handleInput, handleSubmit }}>
+            <Routes>
               <Route path="/" element={<SharedLayout />}>
                 <Route index element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
@@ -49,7 +51,8 @@ function App() {
                 <Route path="*" element={<ErrorPage />} />
               </Route>
             </Routes>
-      </VolunteerContext.Provider>
+          </traineeContext.Provider>
+        </VolunteerContext.Provider>
       </ContactFormContext.Provider>
       </SubscribeContext.Provider>
     </BrowserRouter>
